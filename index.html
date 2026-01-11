@@ -22,7 +22,7 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            display: none; /* Ẩn đi lúc đầu, chờ bấm nút */
+      
         }
 
         iframe {
@@ -86,39 +86,16 @@
     <div class="copyrig">
       <h3 >THI ONLINE MÔN TIN HỌC<br> Trường PT DTNT THCS&THPT Tuy Đức</h3>   
     </div>
-    <div id="start-screen">
-        <button class="btn-start" onclick="goFullScreen()">BẮT ĐẦU THI</button>
-        <p class="note">Nhấn nút để xem toàn màn hình</p>
-        
-        <Hr>
+       <div class="iframe" id="main-content">
+        <iframe src="https://script.google.com/macros/s/AKfycbz78gfSXAk0skjkW5P89zsoXw7fg9yx7kgXJOdOhEFofDniovceF49YiAi7cBG4wUos/exec" allow="autoplay"></iframe>
+    </div>
+           <Hr>
           <h5 class="copyrig"  >2026 - Copyright by Lương Văn Giỏi - 0383477162</h5>
         
     </div>
 
-    <div class="iframe-container" id="main-content">
-        <iframe src="https://script.google.com/macros/s/AKfycbz78gfSXAk0skjkW5P89zsoXw7fg9yx7kgXJOdOhEFofDniovceF49YiAi7cBG4wUos/exec" allow="autoplay; fullscreen"></iframe>
-    </div>
+ 
 
-    <script>
-        function goFullScreen() {
-            var elem = document.documentElement;
-            var startScreen = document.getElementById("start-screen");
-            var mainContent = document.getElementById("main-content");
-
-            // 1. Yêu cầu trình duyệt mở Full màn hình
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.webkitRequestFullscreen) { /* Safari */
-                elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) { /* IE11 */
-                elem.msRequestFullscreen();
-            }
-
-            // 2. Ẩn nút bắt đầu, hiện nội dung web
-            startScreen.style.display = "none";
-            mainContent.style.display = "block";
-        }
-    </script>
 
 </body>
 </html>
